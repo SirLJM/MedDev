@@ -1,13 +1,11 @@
 package com.project.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 
 @EqualsAndHashCode
-@AllArgsConstructor
 @NoArgsConstructor
 public class User implements Comparable<User> {
 
@@ -15,6 +13,11 @@ public class User implements Comparable<User> {
     private String firstName;
     @Getter
     private String lastName;
+
+    public User(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
 
     @Override
