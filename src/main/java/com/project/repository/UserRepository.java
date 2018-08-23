@@ -2,35 +2,23 @@ package com.project.repository;
 
 import com.project.entity.User;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class UserRepository {
 
-    public User addUser(User user) {
+    private SortedSet<User> users;
 
-        return user;
+    public UserRepository() {
+        users = new TreeSet<>();
     }
 
-    public User updateUser(User user) {
-
-        return user;
+    public void store(User user) {
+        users.add(user);
     }
 
-    public User getUserById(int userId) {
-
-        User user = new User();
-        return user;
+    public SortedSet<User> getAll() {
+        return users;
     }
 
-    public List<User> getAllUsers() {
-
-        List<User> list = new ArrayList<User>();
-        return list;
-    }
-
-    public void deleteUser(int userId) {
-
-        deleteUser(userId);
-    }
 }
